@@ -36,9 +36,8 @@ let page = 1;
 
 const search = async () => {
   inputUserData = searchImage.value;
-  const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputUserData}&client_id=${key}`;
-  
-  const response = await fetch(url);
+
+  const response = await fetch(`https://api.unsplash.com/search/photos?page=${page}&query=${inputUserData}&client_id=${key}`);
   const data = await response.json();
 
   const results = data.results;
