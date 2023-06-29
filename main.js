@@ -74,6 +74,7 @@ searchButton.addEventListener('click', (value) => {
   value.preventDefault();
   page = 1;
   search();
+  searchImage.value = '';
 });
 
 showMore.addEventListener('click', () => {
