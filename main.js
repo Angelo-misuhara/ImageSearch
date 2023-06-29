@@ -71,7 +71,8 @@ const search = async () => {
   }
 };
 
-searchButton.addEventListener('click',() => {
+searchButton.addEventListener('click', (value) => {
+  value.preventDefault();
   page = 1;
   search();
 });
