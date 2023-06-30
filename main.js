@@ -48,7 +48,7 @@ const search = async () => {
 
   results.forEach((result) => {
     const imageWrapper = document.createElement('div');
-    imageWrapper.classList.add('col', 'ontainer-image');
+    imageWrapper.classList.add('col','container-image');
 
     const image = document.createElement('img');
     image.src = result.urls.small;
@@ -60,7 +60,6 @@ const search = async () => {
     imageWrapper.style.justifyContent = 'center';
     imageWrapper.style.alignItems = 'center';
     image.style.borderRadius = '10px';
-    image.style.resolution= '300dpi';
     imageWrapper.appendChild(image);
     searchContainer.appendChild(imageWrapper);
   });
@@ -74,9 +73,8 @@ searchButton.addEventListener('click', (value) => {
   value.preventDefault();
   page = 1;
   search();
-  searchImage.value = '';
 });
 
-showMore.addEventListener('click', () => {
-  search();
+showMore.addEventListener('click',async () => {
+  await search();
 });
