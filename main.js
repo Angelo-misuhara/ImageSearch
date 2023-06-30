@@ -30,7 +30,6 @@ const searchContainer = document.querySelector('.container-image');
 const showMore = document.querySelector('#button-More');
 
 const key = 'sC1T9zaRwtaGYTHEFY_VSg-mzzo2jH4PXUcs2T5py-c';
-
 let inputUserData = '';
 let page = 1;
 
